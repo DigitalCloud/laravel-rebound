@@ -1,0 +1,63 @@
+{
+  "name": "digitalcloud/laravel-rebound",
+  "description": "",
+  "keywords": [
+    "digitalcloud",
+    "microservices",
+    "laravel",
+    "rabbitmq",
+    "broadcasting",
+    "events",
+    "fanout"
+  ],
+  "homepage": "https://github.com/digitalcloud/laravel-rebound",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mohammed Rajab",
+      "email": "moh.rajab@dce.sa",
+      "homepage": "https://dce.sa",
+      "role": "Developer"
+    },
+    {
+      "name": "Mohammed Shurrab",
+      "email": "m.sh@dce.sa",
+      "homepage": "https://dce.sa",
+      "role": "CTO"
+    }
+  ],
+  "require": {
+    "php": "^7.1"
+  },
+  "require-dev": {
+    "vladimir-yuldashev/laravel-queue-rabbitmq": "^7.1",
+    "phpunit/phpunit": "^7.0"
+  },
+  "autoload": {
+    "files": [
+      "src\\helper.php"
+    ],
+    "psr-4": {
+      "DigitalCloud\\LaravelRebound\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DigitalCloud\\LaravelRebound\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DigitalCloud\\LaravelRebound\\LaravelReboundServiceProvider"
+      ]
+    }
+  }
+}
